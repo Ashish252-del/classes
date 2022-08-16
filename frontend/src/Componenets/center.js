@@ -1,5 +1,15 @@
 import React from "react";
+import Card from "./card";
 const center = () => {
-    return (<><h1>hello from center</h1></>)
+  return (<>
+     <div className="main"  >
+    <Card/>
+     <Card/>
+    <Card/>
+    
+   
+    </div> 
+   
+  </>)
 };
 export default center;
