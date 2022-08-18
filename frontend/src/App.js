@@ -5,13 +5,15 @@ import Navbar from './Componenets/navbar'; // this return navber html code
 import Footer from './Componenets/footer';
 import Center from './Componenets/center';
 import Home from './Componenets/home';
+import Count from './Componenets/counter';
 function App() {
   return (
     <>
       <Navbar />
        <Center />
        <Center />
-      <Home/>
+      <Home />
+    <Count/>
       <Footer/> 
       </>
   );

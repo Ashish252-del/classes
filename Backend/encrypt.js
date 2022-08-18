@@ -5,7 +5,7 @@ const detabaseconnection = require('./connector/db2');
 // Importing 
 const GAME_MODEL = require('./models/game');
 const bcrypt = require("bcryptjs");
-// we need to tell pour server that we will recieve data in form of json from frontend by this code 
+// we need to tell our server that we will recieve data in form of json from frontend by this code 
 app.use(express.json());
 
 //  when we send data from fronteed to backend in the form of payload
@@ -68,6 +68,19 @@ app.get("/specific", async (req, res) => {
     try {
         console.log("Fatching data")
         const data = await GAME_MODEL.find({ ide: "T8" },
+      { score: 1, gname: 1, ide: 1, _id: 0 });
+        res.json({ success: true, data });
+
+    } catch (error) {
+        console.log(error);
+        res.status(400).json({success:false,error:error.message})
+    }
+})
+// to get only one data
+app.get("/specific", async (req, res) => {
+    try {
+        console.log("Fatching data")
+        const data = await GAME_MODEL.findOne({ ide:Ashish252 },
       { score: 1, gname: 1, ide: 1, _id: 0 });
         res.json({ success: true, data });
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./card";
-const center = () => {
+const Center = () => {
   return (<>
      <div className="main"  >
     <Card/>
@@ -12,4 +12,4 @@ const center = () => {
    
   </>)
 };
-export default center;
+export default Center;

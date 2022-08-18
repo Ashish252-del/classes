@@ -1,5 +1,5 @@
 import React from "react";
-const footer = () => {
+const Footer = () => {
     return (<> <div className="card text-center">
         <div className="card-header">Featured</div>
         <div className="card-body">
@@ -15,4 +15,4 @@ const footer = () => {
         <div className="card-footer text-muted">2 days ago</div>
       </div></>)
 };
-export default footer;
+export default Footer;
