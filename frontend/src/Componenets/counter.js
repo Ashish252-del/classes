@@ -11,6 +11,12 @@ const Count = () => {
     return (
         <>
             <h1 style={{ color: "gray" }}>Current counter : <span style={{ color: "red" }}>{counter}</span></h1>
+            {  (counter<=5)?(
+                <h1 style={{ color: "gray" }}>Status : <span style={{ color: "red" }}>Low</span></h1>)
+                : (counter > 5 && counter < 10) ?
+                    (<h1 style={{ color: "gray" }}>Status : <span style={{ color: "red" }}>Medium</span></h1>) 
+                  :  (<h1 style={{ color: "gray" }}>Status : <span style={{ color: "red" }}>High</span></h1>)
+            }
             <div style={{display:"flex"  } }>
                 <div style={{padding:"20px"}}>
                     <button

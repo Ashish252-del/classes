@@ -73,3 +73,114 @@ css can be used in two ways...
 2. In-line css.  Here, we write the css code on the tag itself as an attribute
  In line css is done using "style" attribute
  In line css is done inside style attribute by putting double curly brackets. {{}}
+
+Parent-Child architecture of compoents
+ Component return JSX(Modified html)
+ JSX rules
+ Use of bootstrap and practicing jsx components.
+ Use of CSS (Both Inline css, and External css)
+ Use of Javascript in html (jsx) (important)
+1. Use of Javascript in two ways
+a> Javascript code is written above return statement
+b> Inline javascript => Javascript is always written inside html, with a curly bracket
+onClick attribute is used when we want to do some action (function)
+on click of that button/tag
+Whenever we want our same component to show different information, according to different
+case, then this is acheived by javascript (called dynamic rendering)
+DOM defines the logical structure of documents 
+and the way a document is accessed and manipulated with the help of javascript.
+Dom is of Two types i.e.
+1. Real DOM
+Real DOM updates slow, because it updates the overall document and
+and reloading takes place
+2. Virtual DOM
+Virtual DOM updates faster because it only updates that particular component which is changed
+not the whole document.
+USESTATE
+Whenever we update value of a variable in a component using normal updation,
+then that component is not updated and reflects the previous value only.
+This can be solved by refreshing our component, everytime when any value is changed,
+This can be acheived using useState.
+Usestates updates the component whenever state changes
+variable ===> state
+updating variable ===> setstate
+PROPS
+Props are used to pass/transfer data from Parent component to child components but 
+not vice-versa
+PROP drilling : It is a method in which we pass states or data
+to many child compoents
+
+
+USEFFECT can be used to call a function on first render/return of the component
+ e.g. calling API
+ UseEffect have two arguments, first is function, second is array of state (whose sideeffect we want)
+ Whenever we want to execute a function on a particular condition or sideeffect,
+ we use useeffct hook.
+ UseEffect is also used to call a function, when any state changes 
+ i.e. why it is also called sideeffect function
+
+Use setTimeout() to count 1 second after initial render:
+
+import { useState, useEffect } from "react";
+import ReactDOM from "react-dom/client";
+
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  });
+
+  return <h1>I've rendered {count} times!</h1>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Timer />);
+
+But wait!! It keeps counting even though it should only count once!
+useEffect runs on every render. That means that when the count changes, a render happens, which then triggers another effect.
+
+ Conditional Rendering means to display component data
+ according to a particular condition.
+In Desi Language : To use if else in jsx/html
+You can't use If else inside JSX. To use if else for jsx,
+we need ternary operators
+
+
+ARRAY MAPPING
+Whenever we want to execute a particular set of code for every element of array,
+Array mapping is used.
+Array Mapping has one candidate which travel across each element
+and perform code for each element assigned by you !
+
+FORM
+Whenever we make an input box in react, Then we need to 
+get what user is typing in input using usstate hook (because we 
+want to do further operations with the data)
+This can be acheived using two attributes in input box.
+1. value
+2.onChange
+ e.g.
+<input
+ value={name}
+ onChange={(e) => setname(e.target.value)}
+ placeholder="Full Name"
+ type="text"
+/>
+
+
+
+Topics Left
+1. MUI (Material UI )
+2. UseContext hook
+3. Form Submission
+4. Api Integration
+5. Mini Project using array mapping
+6. useLocation hook
+7. React Routing and concepts
+8. Use of local storage
+9. Frontend-backend connection
+10. Mini Full Stack Application using both frontend and backend
+11. Deploying Full stack app on heroku

@@ -31,6 +31,7 @@ const Home = () => {
             <p>NO. of likes { likes}</p>
             <p>NO. of comments {comments}</p>
             <p>NO. of share {share}</p>
+            {/* {className and inClik are java-script attributes whick written i jex} */}
             <button className="bnuttonclass" onClick={() => { alert("You have clicked"); handlebutton(); }}
             style={{backgroundColor:"red"}}>View more</button>
         <h2>Thank you</h2>
