@@ -10,8 +10,14 @@ import CondComp from './Componenets/CondComp';
 import ArrayMapping from './Componenets/ArrayMapping';
 import Form from './Componenets/Form';
 import Practiceuseeffect from './Componenets/useeffect-practice';
+import Child from './Componenets/PropsMaterialUi';
+import Parent from './Componenets/useContex/parent';
+import FormSubmit from './Componenets/submitform';
 
 function App() {
+  const parent = () => {
+    alert("This alert is from parent App.js > prop concept")
+  }
   return (
     <>
       <Navbar />
@@ -31,7 +37,16 @@ function App() {
       <hr />
       <h1 style={{color:"gray"}}>You are UseEffect </h1>
       
-      <Practiceuseeffect/>
+      <Practiceuseeffect />
+      <hr />
+      <h1 style={{ color: "gray" }}>You are Learning Props and material-ui </h1>
+       <Child name ={ parent} />
+      <hr />
+      <h1 style={{ color: "gray" }}>You are Learning useContex </h1>
+      <Parent />
+      <hr />
+      <h1 style={{ color: "gray" }}>You are Learning formSubmit </h1>
+      <FormSubmit/>
       <Footer/> 
       </>
   );

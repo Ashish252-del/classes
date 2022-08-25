@@ -1,4 +1,7 @@
 import React, { useState } from "react"; // when we have to import more then one functionalities then we use ,
+import AddIcon from '@mui/icons-material/Add'; //importing Icon
+import RemoveIcon from '@mui/icons-material/Remove';
+import Button from '@mui/material/Button';
 const Count = () => {
     // first element is value and second is fuction that will update the value
     const [counter, setcounter] = useState(0);
@@ -19,19 +22,19 @@ const Count = () => {
             }
             <div style={{display:"flex"  } }>
                 <div style={{padding:"20px"}}>
-                    <button
-                        style={{ backgroundColor: "green", color: "white" }}
-                       
+                    <Button
+                        style={{  color: "green" }}
+                //  {using componenet}      
                  onClick={()=>handleincrement()}   
-               >Increse</button>
+               ><AddIcon/></Button> 
 
             </div>
                 <div style={{padding:"20px"}}>
-                    <button
-                        style={{ backgroundColor: "green", color: "white" }}
+                    <Button
+                        style={{  color: "red" }}
                        
                  onClick={()=>handledecrement()}   
-               >Decrese</button>
+               ><RemoveIcon/></Button>
 
             </div>
             </div>

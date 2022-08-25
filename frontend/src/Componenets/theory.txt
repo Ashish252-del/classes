@@ -104,6 +104,7 @@ This can be acheived using useState.
 Usestates updates the component whenever state changes
 variable ===> state
 updating variable ===> setstate
+
 PROPS
 Props are used to pass/transfer data from Parent component to child components but 
 not vice-versa
@@ -184,3 +185,31 @@ Topics Left
 9. Frontend-backend connection
 10. Mini Full Stack Application using both frontend and backend
 11. Deploying Full stack app on heroku
+
+MUI 
+Material ui provides different icons nd cards, tootit etc, the code of html and css is already written 
+first we need to install material ui from npm (easily available on google)
+then import componenet what you want to add (visit on matrial ui react)
+with the ehlp of miu we can create a whole frontend
+
+UseContext hook
+Suppose we have three level component parent-child1-child2 if any code which is written in parent component
+is needed in child2 then we need to fist pass that code in child1 then from child1 to child2 which may be A
+bad manner when there is huge no. of compoents
+So, react hook privide a concept call Contex.
+React Contex API allow you to easily access data at different level of component tree,
+without passing props to every level
+we can acheave it by two methods
+1. without UseContext hook
+a & b will be in parent nd c will be in child
+a> createContext() // const varname = createContext() // varname will be treated as custom component, we will export
+b> provider        // <varname.provider>  <varname.provider/>
+c> Consumer        // <varname.Consumer>{function}<varname.Consumer/>// inside Consumer tag we can only pass function
+
+2. with UseContext hook
+a> createContext()
+b> Provider
+c> UseContex
+ Note- components what we are calling in parent will always be written in Provider
+
+
