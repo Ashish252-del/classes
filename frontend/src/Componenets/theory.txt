@@ -212,4 +212,21 @@ b> Provider
 c> UseContex
  Note- components what we are calling in parent will always be written in Provider
 
+Form submit
+input component of which can be controlled by react is known as controlled componenet
+<form> <form/> tag has a default behaviour that whenever we submit the form the page will be refresh and 
+data will go in backend because form has its own event names as onSubmit
+if you are writing in form tag then no need to use onClick inside <button> because that is provided by from tag
+itself instead of that use attribute type "submit"
+
+Note- event like onClick , onChange etc required a anonymous fat arrow function to perform the things
+or a second way is like if you have to call a function in button onClick then suppose you have defined a 
+function ashish outside the return then <button onClick={ashish}>  
+
+For multiple input box and complex form , we can pass objects inside the useState as well as we can pass 
+fat arrow function with the help of that we can change the state
+
+
+
+
 

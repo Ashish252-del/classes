@@ -13,6 +13,7 @@ import Practiceuseeffect from './Componenets/useeffect-practice';
 import Child from './Componenets/PropsMaterialUi';
 import Parent from './Componenets/useContex/parent';
 import FormSubmit from './Componenets/submitform';
+import Submitreactform from './Componenets/submitform2'
 
 function App() {
   const parent = () => {
@@ -46,7 +47,10 @@ function App() {
       <Parent />
       <hr />
       <h1 style={{ color: "gray" }}>You are Learning formSubmit </h1>
-      <FormSubmit/>
+      <FormSubmit />
+       <hr />
+      <h1 style={{ color: "gray" }}>You are Learning reactformSubmit </h1>
+      <Submitreactform/>
       <Footer/> 
       </>
   );

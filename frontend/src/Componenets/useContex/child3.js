@@ -10,8 +10,8 @@ const Child3 = () => {
                             return (
                                 <>
                                     <h2 >Hii I am child3 and this is without useContex
-                                        and the message from parent is <h2 style={{ color: "red" }}>{fname} and {lname}
-                                        </h2>
+                                        and the message from parent is <span style={{ color: "red" }}>{fname} and {lname}
+                                        </span>
                                     </h2>
                                     <hr/>
                                 </>);
