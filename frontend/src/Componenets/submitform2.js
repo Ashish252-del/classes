@@ -14,6 +14,8 @@ const Submitreactform = () => {
         // you can also get placeholder by e.target.placeholder
         const a = e.target.name;
         const b = e.target.value;
+        // you can also write const{name, value} = e.target;
+        // rest of code will same just replace a by name and b by value
         setfullname(
             (prev) => {
                 if (a === "firstname") 

@@ -225,7 +225,41 @@ function ashish outside the return then <button onClick={ashish}>
 
 For multiple input box and complex form , we can pass objects inside the useState as well as we can pass 
 fat arrow function with the help of that we can change the state
+Very imp :- spread operator in react
+case 1 : Suppose we have a array
+let a = [2, 5, "as"] nd let b = [1,...a,"patel"]
+b will be like b = [1,2,5,"as","patel"] because of spread operator(...)
 
+case 2 : let [first, ...remainig] = a; (Array destrecturing)
+console.log(fist) // op: 2
+console.log(...remaining) // op:{5,"as"}
+
+case 3: let intro = {
+  fname:"ashish", lname:"patel"
+}
+ let biodeta = {
+  id:1,
+  ...intro
+ }
+then biodeta will be biodeta = {
+  id:1,
+  fname:"ashish", lname:"patel"
+}
+
+API Integration
+PROXY
+While staying at one port(server), if you want to access services
+of any other port, then we proxy that port in our server
+
+Here, To connect frontend at port 3000, to backend at port 5000
+we proxy 5000 port in our frontend server
+
+To connect frontend with backend, we need a connector
+called as "axios"
+first install axios package npm i axios
+we need to write in package.json "proxy": "http://localhost:6000"
+now we can the services of port no. 6000
+read in submitform3
 
 
 

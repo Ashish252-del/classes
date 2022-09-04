@@ -14,7 +14,7 @@ import Child from './Componenets/PropsMaterialUi';
 import Parent from './Componenets/useContex/parent';
 import FormSubmit from './Componenets/submitform';
 import Submitreactform from './Componenets/submitform2'
-
+import Submitreactform3 from './Componenets/submitform3';
 function App() {
   const parent = () => {
     alert("This alert is from parent App.js > prop concept")
@@ -41,6 +41,7 @@ function App() {
       <Practiceuseeffect />
       <hr />
       <h1 style={{ color: "gray" }}>You are Learning Props and material-ui </h1>
+    {/* here we are using name to send the data hence we should use name in child to acess the data */}
        <Child name ={ parent} />
       <hr />
       <h1 style={{ color: "gray" }}>You are Learning useContex </h1>
@@ -50,7 +51,10 @@ function App() {
       <FormSubmit />
        <hr />
       <h1 style={{ color: "gray" }}>You are Learning reactformSubmit </h1>
-      <Submitreactform/>
+      <Submitreactform />
+       <hr />
+      <h1 style={{ color: "gray" }}>You are Learning reactformSubmit using spread operator </h1>
+      <Submitreactform3/>
       <Footer/> 
       </>
   );

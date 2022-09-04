@@ -9,6 +9,7 @@ const Form = () => {
             <br/>
             <input
                 // what will be value of input box
+                // intially value = "" brcause initially name is ""
                 value={name}
                 // onChsnge is a event listener and we have used brackets because we are writing a java-script function
                 onChange={(e) => { setname(e.target.value) }}
